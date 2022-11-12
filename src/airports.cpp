@@ -5,6 +5,7 @@
 #include "airports.h"
 using namespace std;
 
-Airports::Airports() {
+// constructor : initializes all airports by parsing data from OpenFlights
+Airports::Airports(std::string& airportsData) {
 
-  }
+}

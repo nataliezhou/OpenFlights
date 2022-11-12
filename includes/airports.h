@@ -6,5 +6,9 @@ public:
   Airports();
   
 private:
-  vector<bool> right_;
+  string name_; 
+  string city_; 
+  string country_;
+  double latitude_; 
+  double longitude_;
 };
