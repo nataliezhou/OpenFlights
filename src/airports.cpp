@@ -14,3 +14,7 @@ Airports::Airports(string name, string city, string country, string id, double l
     latitude_ = latitude;
     longitude_ = longitude;
 }
+
+string Airports::GetName() { 
+    return name_;
+}
