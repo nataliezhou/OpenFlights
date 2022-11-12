@@ -5,6 +5,6 @@
 #include "airports.h"
 using namespace std;
 
-Airplanes::Airplanes() {
+Airports::Airports() {
 
   }

@@ -1,9 +1,9 @@
 #pragma once
 #include <vector>
 using namespace std;
-class Airplanes{
+class Airports{
 public:
-  Airplanes();
+  Airports();
   
 private:
   vector<bool> right_;
