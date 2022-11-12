@@ -6,6 +6,6 @@
 using namespace std;
 
 // constructor : initializes all airports by parsing data from OpenFlights
-Airports::Airports(std::string& airportsData) {
+Airports::Airports(string name, string city, string country, string id, double latitude, double longitude) {
 
 }

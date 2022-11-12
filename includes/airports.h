@@ -5,12 +5,13 @@
 using namespace std;
 class Airports{
   public:
-    Airports(std::string& airportsData);
+    Airports(string name, string city, string country, string id, double latitude, double longitude);
     
   private:
     string name_; 
     string city_; 
     string country_;
+    string id_;
     double latitude_; 
     double longitude_;
 };
