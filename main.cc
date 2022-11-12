@@ -2,5 +2,6 @@
 #include "graph.h"
 #include <iostream>
 int main() {
-  auto* book = new Graph("./airports.csv");
+  Graph graph("./airports.csv");
+  graph.PrintAllAirports();
 }

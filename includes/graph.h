@@ -2,15 +2,14 @@
 #include <string> 
 #include <vector>
 #include "airports.h"
+#include <fstream> 
+
 using namespace std;
 class Graph{
   public:
-    Graph(const std::string &airport_data);
-
-
-  std::vector<std::string> SplitString(const std::string& str,
-                                          char delimiter)
-    
+    Graph(const string &airport_data);
+    vector<string> SplitString(const string& str, char delimiter);
+    void PrintAllAirports(); // for testing
   private:
-  vector<Airports> graph_;
+    vector<Airports*> graph_;
 };
