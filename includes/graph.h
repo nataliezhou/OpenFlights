@@ -11,5 +11,5 @@ class Graph{
     vector<string> SplitString(const string& str, char delimiter);
     void PrintAllAirports(); // for testing
   private:
-    vector<Airports*> graph_;
+    vector<Airport*> graph_;
 };
