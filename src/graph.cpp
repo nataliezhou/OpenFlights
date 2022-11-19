@@ -64,3 +64,19 @@ void Graph::PrintAllAirports() {
         ++i;
     }
 }
+
+vector<vector<string>> Graph::adjacency_matrix() {
+  vector<vector<string>> adjacency;
+  for (unsigned long i = 0; i < graph_.size(); i++) {
+    vector<string> row;
+    for (unsigned long j = 0; j < graph_.size(); j++) {
+      double distance;
+      distance = sin(graph_.at(i)->GetLatitude()) * sin(graph_.at(j)->GetLatitude()) + cos(graph_.at(i)->GetLatitude()) * cos(graph_.at(j)->GetLatitude()) * cos(graph_.at(i)->GetLongitude() - graph_.at(j)->GetLongitude());
+      distance = acos(distance);
+      distance = (6371 * 3.14 * distance) / 180;
+      row.at(i).at(j) = distance;
+    }
+    adjacency.push_back(row);
+  }
+  return adjacency;
+}
