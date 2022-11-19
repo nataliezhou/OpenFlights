@@ -5,21 +5,21 @@
 #include "airports.h"
 using namespace std;
 
-Airports::Airports() { 
+Airport::Airport() { 
     //nothing for now
 }
 
 // constructor : initializes all airports by parsing data from OpenFlights
-Airports::Airports(string name, string city, string country, string id, double latitude, double longitude) {
+Airport::Airport(string name, string city, string country, string id, double latitude, double longitude) {
     name_ = name;
     city_ = city;
-    country = country_;
-    id = id_;
+    country_ = country;
+    id_ = id;
     latitude_ = latitude;
     longitude_ = longitude;
 }
 
-string Airports::GetName() { 
+string Airport::GetName() { 
     return name_;
 }
 

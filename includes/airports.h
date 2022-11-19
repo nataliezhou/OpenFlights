@@ -3,13 +3,18 @@
 #include <vector>
 
 using namespace std;
-class Airports{
+class Airport{
   public:
-    Airports();
-    Airports(string name, string city, string country, string id, double latitude, double longitude);
+    Airport();
+    Airport(string name, string city, string country, string id, double latitude, double longitude);
     string GetName();
-    string name_; 
+    string GetCity() { return city_; };
+    string GetCountry() { return country_; };
+    string GetId() { return id_; };
+    double GetLatitude() { return latitude_; };
+    double GetLongitude() { return longitude_;};
   private:
+    string name_; 
     string city_; 
     string country_;
     string id_;
