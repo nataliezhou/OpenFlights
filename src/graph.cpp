@@ -32,6 +32,8 @@ Graph::Graph(const string &airport_data) {
         graph_.push_back(curr_airport); 
     }
 
+    // create adjacency matrix
+    adjacency_matrix = getAdjacencyMatrix();
 }
 
 vector<string> Graph::SplitString(const string& str,
@@ -65,16 +67,20 @@ void Graph::PrintAllAirports() {
     }
 }
 
-vector<vector<string>> Graph::adjacency_matrix() {
-  vector<vector<string>> adjacency;
+vector<vector<int>> Graph::getAdjacencyMatrix() {
+  vector<vector<int>> adjacency;
   for (unsigned long i = 0; i < graph_.size(); i++) {
-    vector<string> row;
+    vector<int> row;
     for (unsigned long j = 0; j < graph_.size(); j++) {
+      double lat1 = graph_.at(i)->GetLatitude();
+      double lat2 = graph_.at(j)->GetLatitude();
+      double long1 = graph_.at(i)->GetLongitude();
+      double long2 = graph_.at(j)->GetLongitude();
       double distance;
-      distance = sin(graph_.at(i)->GetLatitude()) * sin(graph_.at(j)->GetLatitude()) + cos(graph_.at(i)->GetLatitude()) * cos(graph_.at(j)->GetLatitude()) * cos(graph_.at(i)->GetLongitude() - graph_.at(j)->GetLongitude());
+      distance = sin(lat1) * sin(lat2) + cos(lat1) * cos(lat2) * cos(long1 - long2);
       distance = acos(distance);
       distance = (6371 * 3.14 * distance) / 180;
-      row.at(i).at(j) = distance;
+      row.push_back(distance);
     }
     adjacency.push_back(row);
   }

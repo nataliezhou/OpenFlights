@@ -3,7 +3,7 @@
 #include <vector>
 
 using namespace std;
-class Airport{
+class Airport{  
   public:
     Airport();
     Airport(string name, string city, string country, string id, double latitude, double longitude);

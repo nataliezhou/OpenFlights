@@ -11,7 +11,9 @@ class Graph{
     Graph(const string &airport_data);
     vector<string> SplitString(const string& str, char delimiter);
     void PrintAllAirports(); // for testing
-    vector<vector<string>> adjacency_matrix();
+    vector<vector<int>> getAdjacencyMatrix();
+    
   private:
     vector<Airport*> graph_;
+    vector<vector<int>> adjacency_matrix;
 };
