@@ -18,8 +18,3 @@ Airport::Airport(string name, string city, string country, string id, double lat
     latitude_ = latitude;
     longitude_ = longitude;
 }
-
-string Airport::GetName() { 
-    return name_;
-}
-

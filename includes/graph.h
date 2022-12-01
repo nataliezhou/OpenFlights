@@ -6,12 +6,13 @@
 #include <cmath>
 
 using namespace std;
-class Graph{
+class Graph {
   public:
     Graph(const string &airport_data);
     vector<string> SplitString(const string& str, char delimiter);
     void PrintAllAirports(); // for testing
     vector<vector<int>> getAdjacencyMatrix();
+    vector<Airport*> getAirports() { return graph_; }
     
   private:
     vector<Airport*> graph_;

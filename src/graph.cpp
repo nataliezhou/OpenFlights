@@ -20,8 +20,11 @@ Graph::Graph(const string &airport_data) {
         string country = all_data.at(3);
         string id = all_data.at(4);
         double latitude, longitude;
+        if (all_data.at(6).size() == 0 || all_data.at(7).size() == 0) continue; 
         stringstream(all_data.at(6)) >> latitude; 
         stringstream(all_data.at(7)) >> longitude; 
+
+        if (name.size() == 0 || abs(latitude) > 90 || abs(longitude) > 180) continue; //exclude airport
 
         name = name.substr(1, name.size() - 2); // remove the quotation marks
         city = city.substr(1, city.size() - 2);
@@ -86,3 +89,21 @@ vector<vector<int>> Graph::getAdjacencyMatrix() {
   }
   return adjacency;
 }
+
+// vector<Airport*> Graph::dijikstra(Airport* source, Airport* destination) {
+  
+//   // initialize distances  // initialize tentative distance value
+//   // initialize previous   // initialize a map that maps current node -> its previous node
+//   // initialize priority_queue   // initialize the priority queue
+//   // initialize visited
+
+//   // while the top of priority_queue is not destination:
+//   //     get the current_node from priority_queue
+//   //     for neighbor in current_node's neighbors and not in visited:
+//   //         if update its neighbor's distances:
+//   //             previous[neighbor] = current_node
+//   //     save current_node into visited
+
+//   // extract path from previous
+//   // return path and distance
+// }

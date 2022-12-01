@@ -3,11 +3,11 @@
 #include <vector>
 
 using namespace std;
-class Airport{  
+class Airport {  
   public:
     Airport();
     Airport(string name, string city, string country, string id, double latitude, double longitude);
-    string GetName();
+    string GetName() { return name_; };
     string GetCity() { return city_; };
     string GetCountry() { return country_; };
     string GetId() { return id_; };
