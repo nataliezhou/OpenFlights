@@ -3,9 +3,12 @@
 #include <iostream>
 
 void tests() {
+  // Testing Graph Constructor - Small File 
   Graph graph1("./tests/small.csv");
    vector<Airport*> airports = graph1.getAirports();
-   if (airports.size() != 10) std::cout << "FAIL";
+  // checks num of airports initialized.
+  if (airports.size() != 10) std::cout << "FAIL";
+  // checks all values of first airport
   if (!(airports[0]->GetName() == "Goroka Airport" && 
       airports[0]->GetCity() == "Goroka" && 
       airports[0]->GetCountry() == "Papua New Guinea" && 
@@ -13,6 +16,7 @@ void tests() {
       airports[0]->GetLatitude() == -6.081689834590001 && 
       airports[0]->GetLongitude() == 145.391998291)) std::cout << "FAIL";
   
+  // Graph Constructor - Big File
   Graph graph2("./airports.csv");
   vector<Airport*> airports2 = graph2.getAirports();
   if(airports2.size() != 7698) std::cout << "FAIL";
@@ -30,5 +34,6 @@ void tests() {
 int main() {
   Graph graph("./airports.csv");
   tests();
+  // graph.PrintAllAirports();
 }
 
