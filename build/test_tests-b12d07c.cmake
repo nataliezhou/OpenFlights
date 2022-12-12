@@ -1,0 +1,7 @@
+add_test( Parse::small_dataset [==[/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build/test]==] Parse::small_dataset  )
+set_tests_properties( Parse::small_dataset PROPERTIES WORKING_DIRECTORY [==[/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build]==])
+add_test( Parse::large_dataset [==[/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build/test]==] Parse::large_dataset  )
+set_tests_properties( Parse::large_dataset PROPERTIES WORKING_DIRECTORY [==[/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build]==])
+add_test( Parse::faulty_dataset [==[/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build/test]==] Parse::faulty_dataset  )
+set_tests_properties( Parse::faulty_dataset PROPERTIES WORKING_DIRECTORY [==[/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build]==])
+set( test_TESTS Parse::small_dataset Parse::large_dataset Parse::faulty_dataset)
