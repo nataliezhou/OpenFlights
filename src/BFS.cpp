@@ -1,7 +1,7 @@
 #include "BFS.h"
 
 vector<Airport*> BFS::bfs_all_airports(int start_idx) { 
-    vector<vector<int>> adj_matrix = graph_->getAdjacencyMatrix();
+    vector<vector<int>> adj_matrix = graph_.getAdjacencyMatrix();
     // visit a node, put in queue. visit all neighbors. visit next in queue 
     vector<Airport*> to_return;       
     queue<unsigned long> queue; 

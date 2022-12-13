@@ -41,7 +41,7 @@ Graph::Graph(const string &airport_data) {
     }
 
     // create adjacency matrix
-    adjacency_matrix = getAdjacencyMatrix(routes.dat);
+    adjacency_matrix = AdjacencyMatrix("./tests/routes.dat");
 }
 
 // helper function for graph constructor
@@ -79,20 +79,26 @@ void Graph::PrintAllAirports() {
     }
 }
 
-vector<vector<int>> Graph::getAdjacencyMatrix(const string &routes_data) { 
-  int num_airports = graph_->size();
+vector<vector<int>> Graph::AdjacencyMatrix(const string &routes_data) { 
+  int num_airports = graph_.size();
   vector<vector<int>> adjacency(num_airports, vector<int> (num_airports, 0)); // initializes num_airports x num_airports matrix with initial value of 0 (no paths yet)
+  ifstream ifs{routes_data}; 
   for (string line; getline(ifs, line); line ="") { 
     vector<string> all_data = SplitString(line, ','); 
     // source airport idx in file = 3, destination idx = 5 -> note the idx is the OpenFlights ID, which is the first column (1, 2,3) in the airports file
-    source_airport_id = all_data[3];
+    int source_airport_id = stoi(all_data[3]);
     Airport* source = graph_[source_airport_id];
-    desination_airport_id = all_data[5]; 
+    int desination_airport_id = stoi(all_data[5]); 
     Airport* destination = graph_[desination_airport_id];
     double distance = getDistanceTwoAirports(source, destination);
     adjacency[source_airport_id][desination_airport_id] = distance; // do we want to put weights here, get the distance?
-
   }
+}
+vector<vector<int>> Graph::getAdjacencyMatrix() { 
+  return adjacency_matrix;
+}
+vector<Airport*> Graph::getGraph() {
+  return graph_;
 }
 
 double Graph::getDistanceTwoAirports(Airport* source, Airport* destination) {
@@ -108,7 +114,7 @@ double Graph::getDistanceTwoAirports(Airport* source, Airport* destination) {
 }
 
 // old implementation adjacency matrix
-// vector<vector<int>> Graph::getAdjacencyMatrix() {
+// vector<vector<int>> Graph::AdjacencyMatrix() {
 //   vector<vector<int>> adjacency;
 //   for (unsigned long i = 0; i < graph_.size(); i++) {
 //     vector<int> row;

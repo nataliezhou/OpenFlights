@@ -11,8 +11,12 @@ class Graph {
     Graph(const string &airport_data);
     vector<string> SplitString(const string& str, char delimiter);
     void PrintAllAirports(); // for testing
-    vector<vector<int>> getAdjacencyMatrix(const string &routes_data);
+    vector<vector<int>> AdjacencyMatrix(const string &routes_data);
     vector<Airport*> getAirports() { return graph_; }
+    vector<vector<int>> getAdjacencyMatrix();
+    vector<Airport*> getGraph();
+    double getDistanceTwoAirports(Airport* source, Airport* destination);
+
 
     Airport* getAirport(int idx); // return pointer to airport given local id -> can just do graph.at(i)
     

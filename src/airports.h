@@ -10,7 +10,7 @@ class Airport {
     string GetName() { return name_; };
     string GetCity() { return city_; };
     string GetCountry() { return country_; };
-    string GetId() { return idx_; };
+    int GetId() { return idx_; };
     double GetLatitude() { return latitude_; };
     double GetLongitude() { return longitude_; };
   private:
