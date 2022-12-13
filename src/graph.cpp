@@ -7,6 +7,7 @@
 #include <iostream> 
 #include <string>
 #include <sstream>
+#include <map>
 using namespace std;
 
 // Graph Constructor : parses through file that contains airport data, 
@@ -15,10 +16,11 @@ using namespace std;
 Graph::Graph(const string &airport_data) {
     ifstream ifs{airport_data}; 
     // goes through each line in airpots.data
+    int local_idx = 0; 
     for (string line; getline(ifs, line); line ="") { 
-       // auto* curr_airport = new Airports();
-        vector<string> all_data = SplitString(line, ','); 
-        int idx = stoi(all_data.at(0));
+       // auto* curr_airport = new Airports();]
+        vector<string> all_data = SplitString(line, ',');  
+       // int idx = stoi(all_data.at(0));
         string name = all_data.at(1);
         string city = all_data.at(2);
         string country = all_data.at(3);
@@ -36,12 +38,25 @@ Graph::Graph(const string &airport_data) {
         country = country.substr(1, country.size() - 2);
         // id = id.substr(1, id.size() - 2);
         
-        auto* curr_airport = new Airport(idx, name, city, country, latitude, longitude);
+        auto* curr_airport = new Airport(local_idx, name, city, country, latitude, longitude);
         graph_.push_back(curr_airport); 
+
+        //
+        airportMap[local_idx] = curr_airport;
+        local_idx++;
     }
+    // cout << airportMap.size() << endl;
+    // map<int, Airport*>::iterator it;
+    // for (it = airportMap.begin(); it != airportMap.end(); it++) { 
+    //   cout << "each it" << endl;
+    //   Airport* airport = it->second;
+    //   cout << it->first << ". " << airport->GetName() << ", " << airport->GetCity() << ", " << airport->GetCountry() << ", "
+    //     << airport->GetLatitude() << ", " << airport->GetLongitude()<< endl;
+    // }
 
     // create adjacency matrix
     adjacency_matrix = AdjacencyMatrix("../tests/routes.dat");
+    //getAdjacencyMatrix();
 }
 
 // helper function for graph constructor
@@ -72,31 +87,42 @@ vector<string> Graph::SplitString(const string& str,
 //FOR TESTING -- checks if all airports are initialized into vector from csv
 void Graph::PrintAllAirports() {  
     int i = 1; 
-    for (Airport* airport : graph_) { 
-        cout << i << ". " << airport->GetName() << ", " << airport->GetCity() << ", " << airport->GetCountry() << ", "
-          << airport->GetId() << ", " << airport->GetLatitude() << ", " << airport->GetLongitude()<< endl;
-        ++i;
+    map<int, Airport*>::iterator it;
+    for (it = airportMap.begin(); it != airportMap.end(); it++) { 
+      cout << "each it" << endl;
+      Airport* airport = it->second;
+      cout << it->first << ". " << airport->GetName() << ", " << airport->GetCity() << ", " << airport->GetCountry() << ", "
+        << airport->GetLatitude() << ", " << airport->GetLongitude()<< endl;
     }
 }
 
 vector<vector<int>> Graph::AdjacencyMatrix(const string &routes_data) { 
-  int num_airports = graph_.size();
-  cout << "num airports: " << num_airports << endl;
-  vector<vector<int>> adjacency(num_airports, vector<int> (num_airports, 0)); // initializes num_airports x num_airports matrix with initial value of 0 (no paths yet)
-  ifstream ifs{routes_data}; 
-  for (string line; getline(ifs, line); line ="") { 
-    vector<string> all_data = SplitString(line, ','); 
-    // source airport idx in file = 3, destination idx = 5 -> note the idx is the OpenFlights ID, which is the first column (1, 2,3) in the airports file
-    int source_airport_id = stoi(all_data[3]);
-    int desination_airport_id = stoi(all_data[5]); 
-    if (stoi(all_data[3]) > num_airports || stoi(all_data[5]) > num_airports) continue; // routes map large dataset, not small, so make sure the route is of airports in file
-    Airport* source = graph_[source_airport_id];
-    Airport* destination = graph_[desination_airport_id];
-    double distance = getDistanceTwoAirports(source, destination);
-    adjacency[source_airport_id][desination_airport_id] = distance; // do we want to put weights here, get the distance?
+    int num_airports = graph_.size();
+    cout << "num airports: " << num_airports << endl;
+    vector<vector<int>> adjacency(num_airports, vector<int> (num_airports, 0)); // initializes num_airports x num_airports matrix with initial value of 0 (no paths yet)
+    ifstream ifs{routes_data}; 
+    for (string line; getline(ifs, line); line ="") {  
+    }
+
+    for (size_t i = 0; i < airportMap.size(); i++) { 
+      for (size_t x = 0; x < airportMap.size(); x++) { 
+        if (i != x) {
+          Airport* source = airportMap[i];
+          Airport* destination = airportMap[x];
+          double distance = getDistanceTwoAirports(source, destination);
+          adjacency[i][x] = distance;
+        }
+      // source airport idx in file = 3, destination idx = 5 -> note the idx is the OpenFlights ID, which is the first column (1, 2,3) in the airports file
+      // int source_airport_id = stoi(all_data[3]);
+      // int desination_airport_id = stoi(all_data[5]); 
+      // if (stoi(all_data[3]) > num_airports || stoi(all_data[5]) > num_airports) continue; // routes map large dataset, not small, so make sure the route is of airports in file
+    
+    // wrong adjacency[source_airport_id][desination_airport_id] = distance; // do we want to put weights here, get the distance?
+    }
   }
   return adjacency;
 }
+
 vector<vector<int>> Graph::getAdjacencyMatrix() { 
   for (auto row : adjacency_matrix) {
     for (int elem : row) {
@@ -107,6 +133,7 @@ vector<vector<int>> Graph::getAdjacencyMatrix() {
   cout << "fin. adjacency matrix" << endl;
   return adjacency_matrix;
 }
+
 vector<Airport*> Graph::getGraph() {
   return graph_;
 }
@@ -146,6 +173,10 @@ double Graph::getDistanceTwoAirports(Airport* source, Airport* destination) {
 
 Airport* Graph::getAirport(int idx) {
   return graph_.at(idx);
+}
+
+map<int, Airport*> Graph::getAirportMap() {
+  return airportMap;
 }
 
 // vector<Airport*> Graph::dijikstra(Airport* source, Airport* destination) {

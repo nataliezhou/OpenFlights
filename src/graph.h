@@ -4,6 +4,7 @@
 #include "airports.h"
 #include <fstream> 
 #include <cmath>
+#include <map>
 
 using namespace std;
 class Graph {
@@ -19,8 +20,9 @@ class Graph {
 
 
     Airport* getAirport(int idx); // return pointer to airport given local id -> can just do graph.at(i)
-    
+    map<int, Airport*> getAirportMap();
   private:
     vector<Airport*> graph_;
     vector<vector<int>> adjacency_matrix;
+    map<int, Airport*> airportMap;
 };
