@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/src.dir/BFS.cpp.o"
   "CMakeFiles/src.dir/BFS.cpp.o.d"
-  "CMakeFiles/src.dir/Dijkstra.cpp.o"
-  "CMakeFiles/src.dir/Dijkstra.cpp.o.d"
+  "CMakeFiles/src.dir/Djikstra.cpp.o"
+  "CMakeFiles/src.dir/Djikstra.cpp.o.d"
   "CMakeFiles/src.dir/PageRank.cpp.o"
   "CMakeFiles/src.dir/PageRank.cpp.o.d"
   "CMakeFiles/src.dir/airports.cpp.o"

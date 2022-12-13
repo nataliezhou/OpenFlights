@@ -431,8 +431,8 @@ src/CMakeFiles/src.dir/BFS.cpp.o
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/math.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/queue
 
-src/CMakeFiles/src.dir/Dijkstra.cpp.o
- /Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/src/Dijkstra.cpp
+src/CMakeFiles/src.dir/Djikstra.cpp.o
+ /Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/src/Djikstra.cpp
 
 src/CMakeFiles/src.dir/PageRank.cpp.o
  /Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/src/PageRank.cpp

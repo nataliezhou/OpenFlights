@@ -430,7 +430,7 @@ src/CMakeFiles/src.dir/BFS.cpp.o: /Users/adeliasolarman/Documents/College/Fal\ 2
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/math.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/queue
 
-src/CMakeFiles/src.dir/Dijkstra.cpp.o: /Users/adeliasolarman/Documents/College/Fal\ 2022/CS\ 225\ Final\ Project/project-openflights/src/Dijkstra.cpp
+src/CMakeFiles/src.dir/Djikstra.cpp.o: /Users/adeliasolarman/Documents/College/Fal\ 2022/CS\ 225\ Final\ Project/project-openflights/src/Djikstra.cpp
 
 src/CMakeFiles/src.dir/PageRank.cpp.o: /Users/adeliasolarman/Documents/College/Fal\ 2022/CS\ 225\ Final\ Project/project-openflights/src/PageRank.cpp
 
@@ -1240,6 +1240,8 @@ src/CMakeFiles/src.dir/graph.cpp.o: /Users/adeliasolarman/Documents/College/Fal\
 
 /Users/adeliasolarman/Documents/College/Fal\ 2022/CS\ 225\ Final\ Project/project-openflights/src/PageRank.cpp:
 
+/Users/adeliasolarman/Documents/College/Fal\ 2022/CS\ 225\ Final\ Project/project-openflights/src/Djikstra.cpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/queue:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/math.h:
@@ -1841,8 +1843,6 @@ src/CMakeFiles/src.dir/graph.cpp.o: /Users/adeliasolarman/Documents/College/Fal\
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/resource.h:
-
-/Users/adeliasolarman/Documents/College/Fal\ 2022/CS\ 225\ Final\ Project/project-openflights/src/Dijkstra.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_ucontext.h:
 

@@ -83,19 +83,19 @@ src/CMakeFiles/src.dir/BFS.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/BFS.cpp.s"
 	cd "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/src/BFS.cpp" -o CMakeFiles/src.dir/BFS.cpp.s
 
-src/CMakeFiles/src.dir/Dijkstra.cpp.o: src/CMakeFiles/src.dir/flags.make
-src/CMakeFiles/src.dir/Dijkstra.cpp.o: /Users/adeliasolarman/Documents/College/Fal\ 2022/CS\ 225\ Final\ Project/project-openflights/src/Dijkstra.cpp
-src/CMakeFiles/src.dir/Dijkstra.cpp.o: src/CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/src.dir/Dijkstra.cpp.o"
-	cd "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/src.dir/Dijkstra.cpp.o -MF CMakeFiles/src.dir/Dijkstra.cpp.o.d -o CMakeFiles/src.dir/Dijkstra.cpp.o -c "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/src/Dijkstra.cpp"
+src/CMakeFiles/src.dir/Djikstra.cpp.o: src/CMakeFiles/src.dir/flags.make
+src/CMakeFiles/src.dir/Djikstra.cpp.o: /Users/adeliasolarman/Documents/College/Fal\ 2022/CS\ 225\ Final\ Project/project-openflights/src/Djikstra.cpp
+src/CMakeFiles/src.dir/Djikstra.cpp.o: src/CMakeFiles/src.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/src.dir/Djikstra.cpp.o"
+	cd "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/src.dir/Djikstra.cpp.o -MF CMakeFiles/src.dir/Djikstra.cpp.o.d -o CMakeFiles/src.dir/Djikstra.cpp.o -c "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/src/Djikstra.cpp"
 
-src/CMakeFiles/src.dir/Dijkstra.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/Dijkstra.cpp.i"
-	cd "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/src/Dijkstra.cpp" > CMakeFiles/src.dir/Dijkstra.cpp.i
+src/CMakeFiles/src.dir/Djikstra.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/Djikstra.cpp.i"
+	cd "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/src/Djikstra.cpp" > CMakeFiles/src.dir/Djikstra.cpp.i
 
-src/CMakeFiles/src.dir/Dijkstra.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/Dijkstra.cpp.s"
-	cd "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/src/Dijkstra.cpp" -o CMakeFiles/src.dir/Dijkstra.cpp.s
+src/CMakeFiles/src.dir/Djikstra.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/Djikstra.cpp.s"
+	cd "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/src/Djikstra.cpp" -o CMakeFiles/src.dir/Djikstra.cpp.s
 
 src/CMakeFiles/src.dir/PageRank.cpp.o: src/CMakeFiles/src.dir/flags.make
 src/CMakeFiles/src.dir/PageRank.cpp.o: /Users/adeliasolarman/Documents/College/Fal\ 2022/CS\ 225\ Final\ Project/project-openflights/src/PageRank.cpp
@@ -142,7 +142,7 @@ src/CMakeFiles/src.dir/graph.cpp.s: cmake_force
 # Object files for target src
 src_OBJECTS = \
 "CMakeFiles/src.dir/BFS.cpp.o" \
-"CMakeFiles/src.dir/Dijkstra.cpp.o" \
+"CMakeFiles/src.dir/Djikstra.cpp.o" \
 "CMakeFiles/src.dir/PageRank.cpp.o" \
 "CMakeFiles/src.dir/airports.cpp.o" \
 "CMakeFiles/src.dir/graph.cpp.o"
@@ -151,7 +151,7 @@ src_OBJECTS = \
 src_EXTERNAL_OBJECTS =
 
 src/libsrc.a: src/CMakeFiles/src.dir/BFS.cpp.o
-src/libsrc.a: src/CMakeFiles/src.dir/Dijkstra.cpp.o
+src/libsrc.a: src/CMakeFiles/src.dir/Djikstra.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/PageRank.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/airports.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/graph.cpp.o

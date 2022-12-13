@@ -10,12 +10,12 @@ Airport::Airport() {
 }
 
 // constructor : initializes all airports by parsing data from OpenFlights
-Airport::Airport(int idx, string name, string city, string country, string id, double latitude, double longitude) {
+Airport::Airport(int idx, string name, string city, string country, double latitude, double longitude) {
     idx_ = idx;
     name_ = name;
     city_ = city;
     country_ = country;
-    id_ = id;
+    // id_ = id;
     latitude_ = latitude;
     longitude_ = longitude;
 }

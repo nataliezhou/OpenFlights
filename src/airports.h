@@ -7,10 +7,10 @@ class Airport {
   public:
     Airport();
     Airport(int idx, string name, string city, string country, double latitude, double longitude);
+    int GetId() { return idx_; };
     string GetName() { return name_; };
     string GetCity() { return city_; };
     string GetCountry() { return country_; };
-    int GetId() { return idx_; };
     double GetLatitude() { return latitude_; };
     double GetLongitude() { return longitude_; };
   private:

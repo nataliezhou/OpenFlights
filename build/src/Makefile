@@ -155,29 +155,29 @@ BFS.cpp.s:
 	cd "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BFS.cpp.s
 .PHONY : BFS.cpp.s
 
-Dijkstra.o: Dijkstra.cpp.o
-.PHONY : Dijkstra.o
+Djikstra.o: Djikstra.cpp.o
+.PHONY : Djikstra.o
 
 # target to build an object file
-Dijkstra.cpp.o:
-	cd "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Dijkstra.cpp.o
-.PHONY : Dijkstra.cpp.o
+Djikstra.cpp.o:
+	cd "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Djikstra.cpp.o
+.PHONY : Djikstra.cpp.o
 
-Dijkstra.i: Dijkstra.cpp.i
-.PHONY : Dijkstra.i
+Djikstra.i: Djikstra.cpp.i
+.PHONY : Djikstra.i
 
 # target to preprocess a source file
-Dijkstra.cpp.i:
-	cd "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Dijkstra.cpp.i
-.PHONY : Dijkstra.cpp.i
+Djikstra.cpp.i:
+	cd "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Djikstra.cpp.i
+.PHONY : Djikstra.cpp.i
 
-Dijkstra.s: Dijkstra.cpp.s
-.PHONY : Dijkstra.s
+Djikstra.s: Djikstra.cpp.s
+.PHONY : Djikstra.s
 
 # target to generate assembly for a file
-Dijkstra.cpp.s:
-	cd "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Dijkstra.cpp.s
-.PHONY : Dijkstra.cpp.s
+Djikstra.cpp.s:
+	cd "/Users/adeliasolarman/Documents/College/Fal 2022/CS 225 Final Project/project-openflights/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Djikstra.cpp.s
+.PHONY : Djikstra.cpp.s
 
 PageRank.o: PageRank.cpp.o
 .PHONY : PageRank.o
@@ -263,9 +263,9 @@ help:
 	@echo "... BFS.o"
 	@echo "... BFS.i"
 	@echo "... BFS.s"
-	@echo "... Dijkstra.o"
-	@echo "... Dijkstra.i"
-	@echo "... Dijkstra.s"
+	@echo "... Djikstra.o"
+	@echo "... Djikstra.i"
+	@echo "... Djikstra.s"
 	@echo "... PageRank.o"
 	@echo "... PageRank.i"
 	@echo "... PageRank.s"
