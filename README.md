@@ -1,6 +1,9 @@
 # project-openflights
 Using OpenFlights – an open-source tool that provides airport, airline, and route data – our goal was to create the shortest route from a starting airport to a destination airport by utilizing Dijikstra’s Algorithm. We also used BFS to visit all the airports from a given (changeable) starting airport. To do this, we represented each Airport as a node in a weighted graph, represented with an adjacency matrix. Airport data is taken from OpenFlight's "airports.dat" file and the graph's weights/the airport's distances are calculated from OpenFlight's provided "routes.dat" file. 
 
+# Team Members
+Adelia Solarman, Natalie Zhou, Ashley Wang, Xiaofan Li
+
 # What's Where
 Our code is split primarily into 5 folders: 
  - build (where the cmake is ran and where the MakeFile is generated)
